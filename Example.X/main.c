@@ -101,8 +101,7 @@ void Task3()
 {    
     //01-03-19
     //changes
-    // dum        
+    // dum   modified by GGS     
 }
 
-/* I added some additional changes at 13:34, GGS 
- more comments - Paulo*/
+/* I added some additional changes at 13:34, GGS  third change*/ 
