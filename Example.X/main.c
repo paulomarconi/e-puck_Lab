@@ -104,4 +104,5 @@ void Task3()
     // dum        
 }
 
-/* I added some additional changes at 13:34, GGS */
+/* I added some additional changes at 13:34, GGS 
+ more comments - Paulo*/
