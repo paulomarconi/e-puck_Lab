@@ -1,3 +1,6 @@
+/* hey hey hey hey, this is Guillermo
+I made this change */
+
 #include <p30F6014A.h>
 #include <motor_led/e_epuck_ports.h>
 #include <motor_led/e_init_port.h>
@@ -7,7 +10,7 @@
 #include <stdio.h>
 
 
-
+/* this is another comment I made, GGS */
 
 
 void Wait(long);
