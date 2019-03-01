@@ -1,6 +1,4 @@
-/* hey hey hey hey, this is Guillermo
-I made this change */
-/*this is yu
+
 #include <p30F6014A.h>
 #include <motor_led/e_epuck_ports.h>
 #include <motor_led/e_init_port.h>
@@ -99,13 +97,6 @@ void Task2()
 
 void Task3()
 {    
-    //01-03-19
-    //changes
-    // dum   modified by GGS
-    // 4th modification 13:38 GGS
-    // 5th modifciation 13:44 ggs
+    
 }
 
-/* I added some additional changes at 13:34, 
- * new comments paulo
- * GGS  third change*/ 
