@@ -38,15 +38,9 @@ int main()
         e_set_front_led(1); // Turn the front red LED on. 
         //e_set_led(8,1); // Turn all the ring LEDs on.
         
-        Task2();
-        
-        
-        
-           
-        
-        
-        
-        
+        Task1();
+        //Task2();
+        //Task3();
         
     }
     return 0;
