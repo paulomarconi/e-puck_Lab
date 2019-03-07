@@ -71,7 +71,7 @@ void Task1()
 
 void Task2()
 {
-    int motor_speed = 394; // 5cm/s * 78.74 [steps/s]/[cm/s] = 394
+    int motor_speed = 394; // 5 [cm/s] * 78.74 [steps/s]/[cm/s] = 394
     int selector = GetSelector();
     if(selector > 0)
     {   
