@@ -18,7 +18,7 @@
 #include "motor_led/advance_one_timer/e_agenda.h"
  */
 
-#define PROXSENSORFACTOR 5
+#define PROXSENSORFACTOR 5 //
 // IT WAS 4 BEFORE
 #define MINSPEED 600
 // IT WAS 550
@@ -35,7 +35,7 @@ int wheelSpeed[2];
 int targetVelocity = 0.9;
 
 // calibrate these values!! 
-int baseVelocity = 3; // was 2
+int baseVelocity = 2; // was 2
 int multiplier = 2;
 
 //int forwardSpeedWeight[4] = {baseVelocity*multiplier*2,baseVelocity*multiplier,baseVelocity,0};
@@ -89,12 +89,10 @@ void avoid_obst(){
 		
 		for (j = 0; j < 4; j++){
 			if( i == 0){
-				cumulative[i] += forwardSpeedWeight[j] * e_get_calibrated_prox(j);
-				cumulative[i] += backwardSpeedWeight[NUMSENSORS/2 - j] * e_get_calibrated_prox(NUMSENSORS - j);
+				cumulative[i] += forwardSpeedWeight[j] * e_get_calibrated_prox(j);			
 				cumulative[i] += backwardSpeedWeight[NUMSENSORS/2 - j - 1] * e_get_calibrated_prox(NUMSENSORS/2 + j);
 			} else if( i == 1 ){
-				cumulative[i] += backwardSpeedWeight[j] * e_get_calibrated_prox(j);
-				cumulative[i] += forwardSpeedWeight[NUMSENSORS/2 - j] * e_get_calibrated_prox(NUMSENSORS - j);
+				cumulative[i] += backwardSpeedWeight[j] * e_get_calibrated_prox(j);				
 				cumulative[i] += forwardSpeedWeight[NUMSENSORS/2 - j - 1] * e_get_calibrated_prox(NUMSENSORS/2 + j);
 			}
 		}
@@ -125,7 +123,7 @@ void run_avoid_obs(void)
 //	e_init_sound();
 	e_calibrate_ir();
 
-	e_activate_agenda(avoid_obst, 500);
+	e_activate_agenda(avoid_obst, 500); //500
 	// call function that use leds to show what the robot is "seeing"
 	e_init_motors();
 	e_start_agendas_processing();
