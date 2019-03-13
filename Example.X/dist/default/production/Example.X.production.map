@@ -153,11 +153,11 @@ Program Memory  [Origin = 0x100, Length = 0x17f00]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0xa6a           0xf9f  (3999)
-.text                        0xb6a              0x1584          0x2046  (8262)
-.dinit                      0x20ee                0xdc           0x14a  (330)
-.text                       0x21ca               0x21e           0x32d  (813)
+.text                        0xb6a              0x1580          0x2040  (8256)
+.dinit                      0x20ea                0xdc           0x14a  (330)
+.text                       0x21c6               0x21e           0x32d  (813)
 
-                 Total program memory used (bytes):         0x345c  (13404) 9%
+                 Total program memory used (bytes):         0x3456  (13398) 9%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0x7c]
@@ -348,69 +348,69 @@ External Symbols in Program Memory (by address):
                   0x001912                  _e_get_steps_right
                   0x00191a                  _e_set_steps_right
                   0x001926                  _initVectors
-                  0x0019a0                  _setMinMax
-                  0x0019c2                  _setWheelSpeeds
-                  0x0019dc                  _avoid_obst
-                  0x001b56                  _run_avoid_obs
-                  0x001b7a                  _e_start_agendas_processing
-                  0x001b96                  _e_end_agendas_processing
-                  0x001b9e                  _e_activate_agenda
-                  0x001bfc                  _e_destroy_agenda
-                  0x001c48                  _e_set_agenda_cycle
-                  0x001c7a                  _e_reset_agenda
-                  0x001caa                  _e_pause_agenda
-                  0x001cda                  _e_restart_agenda
-                  0x001d0a                  __T2Interrupt
-                  0x001d76                  _e_calibrate_ir
-                  0x001e3e                  _e_get_prox
-                  0x001e66                  _e_get_calibrated_prox
-                  0x001ea6                  _e_get_ambient_light
-                  0x001ec2                  _e_init_remote_control
-                  0x001ed0                  __INT0Interrupt
-                  0x001f04                  _e_read_remote_control
-                  0x001fd4                  _e_get_check
-                  0x001fdc                  _e_get_address
-                  0x001fe4                  _e_get_data
-                  0x001fec                  _main
-                  0x002002                  _Wait
-                  0x002026                  _GetSelector
-                  0x00205a                  _Task1
-                  0x002074                  _Task2
-                  0x0020be                  _modeSelector
-                  0x0020e8                  _Task3
-                  0x0021ca                  _e_init_port
-                  0x002254                  __U1TXInterrupt
-                  0x002298                  _e_send_uart1_char
-                  0x0022b0                  _e_uart1_sending
-                  0x0022b4                  __U2TXInterrupt
-                  0x0022f8                  _e_send_uart2_char
-                  0x002310                  _e_uart2_sending
-                  0x002314                  __U1RXInterrupt
-                  0x00232c                  _e_ischar_uart1
-                  0x002334                  _e_getchar_uart1
-                  0x002350                  __U2RXInterrupt
-                  0x002368                  _e_ischar_uart2
-                  0x002370                  _e_getchar_uart2
-                  0x00238c                  _e_init_uart1
-                  0x0023ba                  _e_init_uart2
+                  0x00199c                  _setMinMax
+                  0x0019be                  _setWheelSpeeds
+                  0x0019d8                  _avoid_obst
+                  0x001b52                  _run_avoid_obs
+                  0x001b76                  _e_start_agendas_processing
+                  0x001b92                  _e_end_agendas_processing
+                  0x001b9a                  _e_activate_agenda
+                  0x001bf8                  _e_destroy_agenda
+                  0x001c44                  _e_set_agenda_cycle
+                  0x001c76                  _e_reset_agenda
+                  0x001ca6                  _e_pause_agenda
+                  0x001cd6                  _e_restart_agenda
+                  0x001d06                  __T2Interrupt
+                  0x001d72                  _e_calibrate_ir
+                  0x001e3a                  _e_get_prox
+                  0x001e62                  _e_get_calibrated_prox
+                  0x001ea2                  _e_get_ambient_light
+                  0x001ebe                  _e_init_remote_control
+                  0x001ecc                  __INT0Interrupt
+                  0x001f00                  _e_read_remote_control
+                  0x001fd0                  _e_get_check
+                  0x001fd8                  _e_get_address
+                  0x001fe0                  _e_get_data
+                  0x001fe8                  _main
+                  0x001ffe                  _Wait
+                  0x002022                  _GetSelector
+                  0x002056                  _Task1
+                  0x002070                  _Task2
+                  0x0020ba                  _modeSelector
+                  0x0020e4                  _Task3
+                  0x0021c6                  _e_init_port
+                  0x002250                  __U1TXInterrupt
+                  0x002294                  _e_send_uart1_char
+                  0x0022ac                  _e_uart1_sending
+                  0x0022b0                  __U2TXInterrupt
+                  0x0022f4                  _e_send_uart2_char
+                  0x00230c                  _e_uart2_sending
+                  0x002310                  __U1RXInterrupt
+                  0x002328                  _e_ischar_uart1
+                  0x002330                  _e_getchar_uart1
+                  0x00234c                  __U2RXInterrupt
+                  0x002364                  _e_ischar_uart2
+                  0x00236c                  _e_getchar_uart2
+                  0x002388                  _e_init_uart1
+                  0x0023b6                  _e_init_uart2
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x002026                  _GetSelector
-                  0x00205a                  _Task1
-                  0x002074                  _Task2
-                  0x0020e8                  _Task3
-                  0x002002                  _Wait
+                  0x002022                  _GetSelector
+                  0x002056                  _Task1
+                  0x002070                  _Task2
+                  0x0020e4                  _Task3
+                  0x001ffe                  _Wait
                   0x001304                  __ADCInterrupt
                   0x0001dc                  __DefaultInterrupt
                   0xf8000a                  __FGS.sec
-                  0x001ed0                  __INT0Interrupt
-                  0x001d0a                  __T2Interrupt
-                  0x002314                  __U1RXInterrupt
-                  0x002254                  __U1TXInterrupt
-                  0x002350                  __U2RXInterrupt
-                  0x0022b4                  __U2TXInterrupt
+                  0x001ecc                  __INT0Interrupt
+                  0x001d06                  __T2Interrupt
+                  0x002310                  __U1RXInterrupt
+                  0x002250                  __U1TXInterrupt
+                  0x00234c                  __U2RXInterrupt
+                  0x0022b0                  __U2TXInterrupt
                   0x0005c6                  ___addsf3
                   0x000234                  ___divsf3
                   0x0002b8                  ___divsi3
@@ -439,8 +439,8 @@ External Symbols in Program Memory (by name):
                   0x000394                  __funpack2
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x0019dc                  _avoid_obst
-                  0x001b9e                  _e_activate_agenda
+                  0x0019d8                  _avoid_obst
+                  0x001b9a                  _e_activate_agenda
                   0x0015f4                  _e_ad_is_acquisition_completed
                   0x0015fc                  _e_ad_is_array_filled
                   0x00160c                  _e_ad_scan_off
@@ -454,35 +454,35 @@ External Symbols in Program Memory (by name):
                   0x000fd4                  _e_blink_led5
                   0x000ff2                  _e_blink_led6
                   0x001010                  _e_blink_led7
-                  0x001d76                  _e_calibrate_ir
-                  0x001bfc                  _e_destroy_agenda
-                  0x001b96                  _e_end_agendas_processing
-                  0x001fdc                  _e_get_address
-                  0x001ea6                  _e_get_ambient_light
-                  0x001e66                  _e_get_calibrated_prox
-                  0x001fd4                  _e_get_check
-                  0x001fe4                  _e_get_data
-                  0x001e3e                  _e_get_prox
+                  0x001d72                  _e_calibrate_ir
+                  0x001bf8                  _e_destroy_agenda
+                  0x001b92                  _e_end_agendas_processing
+                  0x001fd8                  _e_get_address
+                  0x001ea2                  _e_get_ambient_light
+                  0x001e62                  _e_get_calibrated_prox
+                  0x001fd0                  _e_get_check
+                  0x001fe0                  _e_get_data
+                  0x001e3a                  _e_get_prox
                   0x0018fe                  _e_get_steps_left
                   0x001912                  _e_get_steps_right
-                  0x002334                  _e_getchar_uart1
-                  0x002370                  _e_getchar_uart2
+                  0x002330                  _e_getchar_uart1
+                  0x00236c                  _e_getchar_uart2
                   0x00124a                  _e_init_ad_scan
                   0x0017ac                  _e_init_motors
-                  0x0021ca                  _e_init_port
-                  0x001ec2                  _e_init_remote_control
-                  0x00238c                  _e_init_uart1
-                  0x0023ba                  _e_init_uart2
-                  0x00232c                  _e_ischar_uart1
-                  0x002368                  _e_ischar_uart2
+                  0x0021c6                  _e_init_port
+                  0x001ebe                  _e_init_remote_control
+                  0x002388                  _e_init_uart1
+                  0x0023b6                  _e_init_uart2
+                  0x002328                  _e_ischar_uart1
+                  0x002364                  _e_ischar_uart2
                   0x000dea                  _e_led_clear
-                  0x001caa                  _e_pause_agenda
-                  0x001f04                  _e_read_remote_control
-                  0x001c7a                  _e_reset_agenda
-                  0x001cda                  _e_restart_agenda
-                  0x002298                  _e_send_uart1_char
-                  0x0022f8                  _e_send_uart2_char
-                  0x001c48                  _e_set_agenda_cycle
+                  0x001ca6                  _e_pause_agenda
+                  0x001f00                  _e_read_remote_control
+                  0x001c76                  _e_reset_agenda
+                  0x001cd6                  _e_restart_agenda
+                  0x002294                  _e_send_uart1_char
+                  0x0022f4                  _e_send_uart2_char
+                  0x001c44                  _e_set_agenda_cycle
                   0x001046                  _e_set_blinking_cycle
                   0x000e00                  _e_set_body_led
                   0x000e3c                  _e_set_front_led
@@ -492,11 +492,11 @@ External Symbols in Program Memory (by name):
                   0x001846                  _e_set_speed_right
                   0x001906                  _e_set_steps_left
                   0x00191a                  _e_set_steps_right
-                  0x001b7a                  _e_start_agendas_processing
+                  0x001b76                  _e_start_agendas_processing
                   0x00102e                  _e_start_led_blinking
                   0x00103c                  _e_stop_led_blinking
-                  0x0022b0                  _e_uart1_sending
-                  0x002310                  _e_uart2_sending
+                  0x0022ac                  _e_uart1_sending
+                  0x00230c                  _e_uart2_sending
                   0x0009a8                  _exit
                   0x000680                  _expf
                   0x0010b0                  _flow_led
@@ -506,18 +506,18 @@ External Symbols in Program Memory (by name):
                   0x000818                  _ldexpf
                   0x0011f2                  _left_led
                   0x00085c                  _logf
-                  0x001fec                  _main
+                  0x001fe8                  _main
                   0x0009b0                  _malloc
                   0x000b5a                  _memcpy
-                  0x0020be                  _modeSelector
+                  0x0020ba                  _modeSelector
                   0x0003c4                  _powf
                   0x000ad8                  _realloc
                   0x00119a                  _right_led
-                  0x001b56                  _run_avoid_obs
+                  0x001b52                  _run_avoid_obs
                   0x001614                  _run_left_motor
                   0x0016e0                  _run_right_motor
-                  0x0019a0                  _setMinMax
-                  0x0019c2                  _setWheelSpeeds
+                  0x00199c                  _setMinMax
+                  0x0019be                  _setWheelSpeeds
                   0x00105a                  _snake_led
 
 Memory Configuration
@@ -2113,7 +2113,7 @@ __c30_signature
  .ivt._U2TXInterrupt
                   0x000046          0x2 build/default/production/_ext/1586682380/e_uart2_tx_char.o
 
-.text             0x000b6a       0x1584
+.text             0x000b6a       0x1580
  .text            0x000b6a        0x6e0 build/default/production/_ext/105629/e_led.o
                   0x000b6a                  _e_set_led
                   0x000dea                  _e_led_clear
@@ -2154,66 +2154,66 @@ __c30_signature
                   0x001906                  _e_set_steps_left
                   0x001912                  _e_get_steps_right
                   0x00191a                  _e_set_steps_right
- .text            0x001926        0x254 build/default/production/run_avoid_obs.o
+ .text            0x001926        0x250 build/default/production/run_avoid_obs.o
                   0x001926                  _initVectors
-                  0x0019a0                  _setMinMax
-                  0x0019c2                  _setWheelSpeeds
-                  0x0019dc                  _avoid_obst
-                  0x001b56                  _run_avoid_obs
- .text            0x001b7a        0x1fc build/default/production/_ext/105629/e_agenda.o
-                  0x001b7a                  _e_start_agendas_processing
-                  0x001b96                  _e_end_agendas_processing
-                  0x001b9e                  _e_activate_agenda
-                  0x001bfc                  _e_destroy_agenda
-                  0x001c48                  _e_set_agenda_cycle
-                  0x001c7a                  _e_reset_agenda
-                  0x001caa                  _e_pause_agenda
-                  0x001cda                  _e_restart_agenda
-                  0x001d0a                  __T2Interrupt
- .text            0x001d76        0x14c build/default/production/_ext/1074974123/e_prox.o
-                  0x001d76                  _e_calibrate_ir
-                  0x001e3e                  _e_get_prox
-                  0x001e66                  _e_get_calibrated_prox
-                  0x001ea6                  _e_get_ambient_light
- .text            0x001ec2        0x12a build/default/production/_ext/105629/e_remote_control.o
-                  0x001ec2                  _e_init_remote_control
-                  0x001ed0                  __INT0Interrupt
-                  0x001f04                  _e_read_remote_control
-                  0x001fd4                  _e_get_check
-                  0x001fdc                  _e_get_address
-                  0x001fe4                  _e_get_data
- .text            0x001fec        0x102 build/default/production/main.o
-                  0x001fec                  _main
-                  0x002002                  _Wait
-                  0x002026                  _GetSelector
-                  0x00205a                  _Task1
-                  0x002074                  _Task2
-                  0x0020be                  _modeSelector
-                  0x0020e8                  _Task3
+                  0x00199c                  _setMinMax
+                  0x0019be                  _setWheelSpeeds
+                  0x0019d8                  _avoid_obst
+                  0x001b52                  _run_avoid_obs
+ .text            0x001b76        0x1fc build/default/production/_ext/105629/e_agenda.o
+                  0x001b76                  _e_start_agendas_processing
+                  0x001b92                  _e_end_agendas_processing
+                  0x001b9a                  _e_activate_agenda
+                  0x001bf8                  _e_destroy_agenda
+                  0x001c44                  _e_set_agenda_cycle
+                  0x001c76                  _e_reset_agenda
+                  0x001ca6                  _e_pause_agenda
+                  0x001cd6                  _e_restart_agenda
+                  0x001d06                  __T2Interrupt
+ .text            0x001d72        0x14c build/default/production/_ext/1074974123/e_prox.o
+                  0x001d72                  _e_calibrate_ir
+                  0x001e3a                  _e_get_prox
+                  0x001e62                  _e_get_calibrated_prox
+                  0x001ea2                  _e_get_ambient_light
+ .text            0x001ebe        0x12a build/default/production/_ext/105629/e_remote_control.o
+                  0x001ebe                  _e_init_remote_control
+                  0x001ecc                  __INT0Interrupt
+                  0x001f00                  _e_read_remote_control
+                  0x001fd0                  _e_get_check
+                  0x001fd8                  _e_get_address
+                  0x001fe0                  _e_get_data
+ .text            0x001fe8        0x102 build/default/production/main.o
+                  0x001fe8                  _main
+                  0x001ffe                  _Wait
+                  0x002022                  _GetSelector
+                  0x002056                  _Task1
+                  0x002070                  _Task2
+                  0x0020ba                  _modeSelector
+                  0x0020e4                  _Task3
 
-.dinit            0x0020ee         0xdc
- .dinit           0x0020ee         0xdc data_init
+.dinit            0x0020ea         0xdc
+ .dinit           0x0020ea         0xdc data_init
 
-.text             0x0021ca        0x21e
- .text            0x0021ca         0x8a build/default/production/_ext/1971588547/e_init_port.o
-                  0x0021ca                  _e_init_port
- .text            0x002254         0x60 build/default/production/_ext/1586682380/e_uart1_tx_char.o
-                  0x002254                  __U1TXInterrupt
-                  0x002298                  _e_send_uart1_char
-                  0x0022b0                  _e_uart1_sending
- .text            0x0022b4         0x60 build/default/production/_ext/1586682380/e_uart2_tx_char.o
-                  0x0022b4                  __U2TXInterrupt
-                  0x0022f8                  _e_send_uart2_char
-                  0x002310                  _e_uart2_sending
- .text            0x002314         0x3c build/default/production/_ext/1586682380/e_uart1_rx_char.o
-                  0x002314                  __U1RXInterrupt
-                  0x00232c                  _e_ischar_uart1
-                  0x002334                  _e_getchar_uart1
- .text            0x002350         0x3c build/default/production/_ext/1586682380/e_uart2_rx_char.o
-                  0x002350                  __U2RXInterrupt
-                  0x002368                  _e_ischar_uart2
-                  0x002370                  _e_getchar_uart2
- .text            0x00238c         0x2e build/default/production/_ext/1586682380/e_init_uart1.o
-                  0x00238c                  _e_init_uart1
- .text            0x0023ba         0x2e build/default/production/_ext/1586682380/e_init_uart2.o
-                  0x0023ba                  _e_init_uart2
+.text             0x0021c6        0x21e
+ .text            0x0021c6         0x8a build/default/production/_ext/1971588547/e_init_port.o
+                  0x0021c6                  _e_init_port
+ .text            0x002250         0x60 build/default/production/_ext/1586682380/e_uart1_tx_char.o
+                  0x002250                  __U1TXInterrupt
+                  0x002294                  _e_send_uart1_char
+                  0x0022ac                  _e_uart1_sending
+ .text            0x0022b0         0x60 build/default/production/_ext/1586682380/e_uart2_tx_char.o
+                  0x0022b0                  __U2TXInterrupt
+                  0x0022f4                  _e_send_uart2_char
+                  0x00230c                  _e_uart2_sending
+ .text            0x002310         0x3c build/default/production/_ext/1586682380/e_uart1_rx_char.o
+                  0x002310                  __U1RXInterrupt
+                  0x002328                  _e_ischar_uart1
+                  0x002330                  _e_getchar_uart1
+ .text            0x00234c         0x3c build/default/production/_ext/1586682380/e_uart2_rx_char.o
+                  0x00234c                  __U2RXInterrupt
+                  0x002364                  _e_ischar_uart2
+                  0x00236c                  _e_getchar_uart2
+ .text            0x002388         0x2e build/default/production/_ext/1586682380/e_init_uart1.o
+                  0x002388                  _e_init_uart1
+ .text            0x0023b6         0x2e build/default/production/_ext/1586682380/e_init_uart2.o
+                  0x0023b6                  _e_init_uart2

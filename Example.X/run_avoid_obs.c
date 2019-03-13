@@ -44,13 +44,13 @@ int backwardSpeedWeight[NUMSENSORS/2];
 
 void initVectors(int *forwardV,int *backwardV,int baseVelocity, int multiplier){
     int scaler;
-    for(i = 0; i < NUMSENSORS/2; i++){
-        if ( i == 0) 
-            scaler = 1;
+    for(i = NUMSENSORS/2 - 1; i >= 0; i--){
+        if ( i == NUMSENSORS/2-1) 
+            scaler = 0;
         else
-            scaler = pow(multiplier,i-1);
-        forwardV[NUMSENSORS/2 - i] = baseVelocity * scaler;
-        backwardV[NUMSENSORS/2 - i] = -multiplier*forwardV[NUMSENSORS/2 - i];
+            scaler = pow(multiplier,NUMSENSORS/2-2-i);
+        forwardV[i] = baseVelocity * scaler;
+        backwardV[i] = -multiplier*forwardV[i];
     }
 }
 
