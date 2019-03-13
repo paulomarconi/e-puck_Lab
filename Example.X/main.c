@@ -9,6 +9,9 @@
 
 #include "run_avoid_obs.h"
 
+
+int prx0; int prx7;
+
 void Wait(long);
 int GetSelector(void);
 
@@ -102,7 +105,8 @@ void modeSelector(){
         Task1();
     else if ( selector == 2)
         Task2();
-    
+    else if ( selector == 3)
+        Task3();
     // guys add your code here and we can test multiple algorithms with every compilation.
     else
         run_avoid_obs();
@@ -110,6 +114,31 @@ void modeSelector(){
 }
 void Task3()
 {    
-    
+prx0 = e_get_prox(0);
+
+    prx7 = e_get_prox(7);  
+    e_set_speed_left(500);
+    e_set_speed_right(500);
+    if(prx0 > 800)
+    {
+       e_set_speed_left(0);
+       e_set_speed_right(0);
+       Wait(10000);
+       if(prx7>=prx0)
+       {
+            e_set_speed_left(0);e_set_speed_right(0);Wait(10000);
+            do {e_set_speed_left(100);e_set_speed_right(-100);}
+            while(prx7==0&&prx0==0);
+            Wait(20000);
+       }
+       else
+       {
+            e_set_speed_left(0);e_set_speed_right(0);Wait(10000);
+            do {e_set_speed_left(-100);e_set_speed_right(100);}
+            while(prx7==0&&prx0==0);
+            Wait(10000);
+       }
+
+    }    
 }
 
