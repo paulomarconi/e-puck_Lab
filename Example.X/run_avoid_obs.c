@@ -1,4 +1,4 @@
-#include <run_avoid_obs.h>
+#include "run_avoid_obs.h"
 #include <p30F6014A.h>
 #include "motor_led/e_init_port.h" // motor init
 #include "a_d/advance_ad_scan/e_prox.h" // proximity sensors init
@@ -6,8 +6,11 @@
 #include <motor_led/e_epuck_ports.h> // motor ports init
 #include "a_d/advance_ad_scan/e_ad_conv.h" // analog digital conv
 
+//#include <codec/e_sound.h>
 #include <stdio.h> // standard io
 #include <math.h>
+
+
 
 
 /* #include "motor_led/advance_one_timer/e_motors.h"
@@ -24,7 +27,7 @@
 
 int i, j;
 
-long cumulative;
+long cumulative[2];
 
 int wheelSpeed[2];
 // target velocity as a percentage of max velocity;
@@ -37,17 +40,19 @@ int multiplier = 2;
 
 //int forwardSpeedWeight[4] = {baseVelocity*multiplier*2,baseVelocity*multiplier,baseVelocity,0};
 int forwardSpeedWeight[NUMSENSORS/2];
-int scaler;
-for (i = 0; i < NUMSENSORS/2; i++){
-	if ( i == 0) 
-		scaler = 1;
-	else
-		scaler = pow(multiplier,i-1);
-	
-	forwardSpeedWeight[NUMSENSORS/2 - i] = baseVelocity * scaler;
-}
+int backwardSpeedWeight[NUMSENSORS/2];
 
-int backwardSpeedWeight[NUMSENSORS/2] = -multiplier*forwardSpeedWeight;
+void initVectors(int *forwardV,int *backwardV,int baseVelocity, int multiplier){
+    int scaler;
+    for(i = 0; i < NUMSENSORS/2; i++){
+        if ( i == 0) 
+            scaler = 1;
+        else
+            scaler = pow(multiplier,i-1);
+        forwardV[NUMSENSORS/2 - i] = baseVelocity * scaler;
+        backwardV[NUMSENSORS/2 - i] = -multiplier*forwardV[NUMSENSORS/2 - i];
+    }
+}
 
 // function used to set the min and max values of the velocity
 int setMinMax(int limit, int targetSpeed){
@@ -110,9 +115,10 @@ void avoid_obst(){
 // main function to initialise and call avoid_obstacle function
 void run_avoid_obs(void)
 {	
+    initVectors(&forwardSpeedWeight, &backwardSpeedWeight, baseVelocity, multiplier);
 	e_init_port();
 	e_init_ad_scan(ALL_ADC);
-	e_init_sound();
+//	e_init_sound();
 	e_calibrate_ir();
 
 	e_activate_agenda(avoid_obst, 500);
@@ -120,9 +126,10 @@ void run_avoid_obs(void)
 	e_init_motors();
 	e_start_agendas_processing();
 	
-	// testing of wouaaaah
-	e_play_sound(11028, 8016);
-	for (long i = 0; i< 8016;i++);
+//	// testing of wouaaaah
+//	e_play_sound(11028, 8016);
+//    long t;
+//	for (t = 0; t< 8016;t++);
 
 	while(1){
 		// main loop
