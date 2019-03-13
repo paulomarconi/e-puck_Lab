@@ -86,15 +86,19 @@ void avoid_obst(){
 	for (i = 0; i < 2; i++)
 	{
 		cumulative[i] = 0;
+		
 		for (j = 0; j < 4; j++){
 			if( i == 0){
 				cumulative[i] += forwardSpeedWeight[j] * e_get_calibrated_prox(j);
 				cumulative[i] += backwardSpeedWeight[NUMSENSORS/2 - j] * e_get_calibrated_prox(NUMSENSORS - j);
+				cumulative[i] += backwardSpeedWeight[NUMSENSORS/2 - j - 1] * e_get_calibrated_prox(NUMSENSORS/2 + j);
 			} else if( i == 1 ){
 				cumulative[i] += backwardSpeedWeight[j] * e_get_calibrated_prox(j);
 				cumulative[i] += forwardSpeedWeight[NUMSENSORS/2 - j] * e_get_calibrated_prox(NUMSENSORS - j);
+				cumulative[i] += forwardSpeedWeight[NUMSENSORS/2 - j - 1] * e_get_calibrated_prox(NUMSENSORS/2 + j);
 			}
 		}
+
 		
 		// wheel speed proportional to cumulative sum of sensor reading + some min speed. Sign is adjusted.
 		// perhaps too big.
