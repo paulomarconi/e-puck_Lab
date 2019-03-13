@@ -30,10 +30,6 @@ int wheelSpeed[2];
 // TO DO: use
 int targetVelocity = 0.9;
 
-int matrix_prox[2][8] =
-	{{8,4,2,0,0,-4,-8,-16},
-	{-16,-8,-4,0,0,2,4,8}};
-
 // calibrate these values!! 
 int baseVelocity = 3; // was 2
 int multiplier = 2;
