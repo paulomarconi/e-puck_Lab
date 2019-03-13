@@ -1,3 +1,4 @@
+#include <run_avoid_obs.h>
 #include <p30F6014A.h>
 #include "motor_led/e_init_port.h" // motor init
 #include "a_d/advance_ad_scan/e_prox.h" // proximity sensors init
