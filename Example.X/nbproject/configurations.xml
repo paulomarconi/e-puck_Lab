@@ -14,6 +14,7 @@
       <itemPath>../epucklibs/motor_led/advance_one_timer/e_remote_control.h</itemPath>
       <itemPath>../epucklibs/a_d/advance_ad_scan/e_ad_conv.h</itemPath>
       <itemPath>../epucklibs/uart/e_uart_char.h</itemPath>
+      <itemPath>run_avoid_obs.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -36,6 +37,7 @@
       <itemPath>../epucklibs/uart/e_uart2_rx_char.s</itemPath>
       <itemPath>../epucklibs/uart/e_uart2_tx_char.s</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>run_avoid_obs.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -7,9 +7,7 @@
 #include <uart/e_uart_char.h>
 #include <stdio.h>
 
-
-/* this is another comment I made, GGS */
-
+#include "run_avoid_obs.h"
 
 void Wait(long);
 int GetSelector(void);
@@ -17,6 +15,7 @@ int GetSelector(void);
 void Task1();
 void Task2();
 void Task3();
+void modeSelector();
 //==============================================================================
 int main()
 {
@@ -39,9 +38,10 @@ int main()
         e_set_front_led(1); // Turn the front red LED on. 
         //e_set_led(8,1); // Turn all the ring LEDs on.
         
-        Task1();
+        //Task1();
         //Task2();
         //Task3();
+        modeSelector();
         
     }
     return 0;
@@ -58,8 +58,6 @@ int GetSelector()
 {
     return SELECTOR0 + 2*SELECTOR1 + 4*SELECTOR2 + 8*SELECTOR3;
 }
-
-
 
 void Task1()
 {
@@ -95,6 +93,21 @@ void Task2()
     }
 }
 
+void modeSelector(){
+    int selector = GetSelector();
+    
+    if(selector == 0)
+        run_avoid_obs();
+    else if (selector == 1)
+        Task1();
+    else if ( selector == 2)
+        Task2();
+    
+    // guys add your code here and we can test multiple algorithms with every compilation.
+    else
+        run_avoid_obs();
+    
+}
 void Task3()
 {    
     
