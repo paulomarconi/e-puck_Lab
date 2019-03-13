@@ -35,7 +35,7 @@ int wheelSpeed[2];
 int targetVelocity = 0.9;
 
 // calibrate these values!! 
-int baseVelocity = 2; // was 2
+int baseVelocity = 3; // was 2
 int multiplier = 2;
 
 //int forwardSpeedWeight[4] = {baseVelocity*multiplier*2,baseVelocity*multiplier,baseVelocity,0};
@@ -50,7 +50,8 @@ void initVectors(int *forwardV,int *backwardV,int baseVelocity, int multiplier){
         else
             scaler = pow(multiplier,NUMSENSORS/2-2-i);
         forwardV[i] = baseVelocity * scaler;
-        backwardV[i] = -multiplier*forwardV[i];
+        //backwardV[i] = -multiplier*forwardV[i];
+        backwardV[i] = -forwardV[i];
     }
 }
 
@@ -123,7 +124,7 @@ void run_avoid_obs(void)
 //	e_init_sound();
 	e_calibrate_ir();
 
-	e_activate_agenda(avoid_obst, 500); //500
+	e_activate_agenda(avoid_obst, 2000); //500
 	// call function that use leds to show what the robot is "seeing"
 	e_init_motors();
 	e_start_agendas_processing();

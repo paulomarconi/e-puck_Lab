@@ -32,18 +32,18 @@ int main()
     
     e_start_agendas_processing(); // Allows the robot to execute multiple tasks.
     
-    
+   
+    prx0 = e_get_prox(0);
+    prx7 = e_get_prox(7);  
+    e_set_speed_left(500);
+    e_set_speed_right(500);
 
+    
     // Main Loop.
     while(1)
     {
-        // Task 0
-        e_set_front_led(1); // Turn the front red LED on. 
-        //e_set_led(8,1); // Turn all the ring LEDs on.
-        
-        //Task1();
-        //Task2();
-        //Task3();
+        //e_set_front_led(1); // Turn the front red LED on. 
+        //e_set_led(8,1); // Turn all the ring LEDs on.       
         modeSelector();
         
     }
@@ -114,11 +114,6 @@ void modeSelector(){
 }
 void Task3()
 {    
-prx0 = e_get_prox(0);
-
-    prx7 = e_get_prox(7);  
-    e_set_speed_left(500);
-    e_set_speed_right(500);
     if(prx0 > 800)
     {
        e_set_speed_left(0);
