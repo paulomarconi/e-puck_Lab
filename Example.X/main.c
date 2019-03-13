@@ -11,7 +11,7 @@
 
 void Wait(long);
 int GetSelector(void);
-
+int prx_0,prx_7;
 void Task1();
 void Task2();
 void Task3();
@@ -92,7 +92,48 @@ void Task2()
         e_set_speed_right(0);
     }
 }
+int main()
+{
+    // Initialisation. 
+    e_init_port(); // Initialises the ports.
+    e_init_ad_scan(ALL_ADC); // Initialises the analogue to digital converters.
+    e_led_clear(); // Turn off all the LEDs in the initialisation stage.
+    e_start_agendas_processing(); // Allows the robot to execute multiple tasks.
+    
+    e_init_uart1(); // Initialises the UART. Uncomment when you use Bluetooth communication.
+    e_calibrate_ir(); // Uncomment when you use Proximity Sensors.
+    e_init_motors(); // Initialises the motors. Uncomment when you use the motors.
 
+   
+void Task3()
+{    
+    prx0 = e_get_prox(0);
+   
+     prx7 = e_get_prox(7);  
+     e_set_speed_left(500);
+	 e_set_speed_right(500);
+      if(prx0 > 800)
+       {
+        e_set_speed_left(0);
+	    e_set_speed_right(0);
+        Wait(10000);
+        if(prx7>=prx0)
+        {
+            e_set_speed_left(0);e_set_speed_right(0);Wait(10000);
+            do {e_set_speed_left(100);e_set_speed_right(-100);}
+            while(prx7==0&&prx0==0);
+            Wait(20000);
+        }
+        else
+        {
+            e_set_speed_left(0);e_set_speed_right(0);Wait(10000);
+            do {e_set_speed_left(-100);e_set_speed_right(100);}
+            while(prx7==0&&prx0==0);
+            Wait(10000);
+        }
+        
+     }
+ }
 void modeSelector(){
     int selector = GetSelector();
     
@@ -102,14 +143,11 @@ void modeSelector(){
         Task1();
     else if ( selector == 2)
         Task2();
-    
+    else if(selector==3)
+        Task3();
     // guys add your code here and we can test multiple algorithms with every compilation.
     else
         run_avoid_obs();
-    
-}
-void Task3()
-{    
     
 }
 
