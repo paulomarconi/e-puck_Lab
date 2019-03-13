@@ -96,7 +96,17 @@ void avoid_obst(){
 				cumulative[i] += backwardSpeedWeight[j] * e_get_calibrated_prox(j);				
 				cumulative[i] += forwardSpeedWeight[NUMSENSORS/2 - j - 1] * e_get_calibrated_prox(NUMSENSORS/2 + j);
 			}
-		}
+            
+            /*if( i == 0){
+				cumulative[i] += forwardSpeedWeight[j] * e_get_prox(j);			
+				cumulative[i] += backwardSpeedWeight[NUMSENSORS/2 - j - 1] * e_get_prox(NUMSENSORS/2 + j);
+			} else if( i == 1 ){
+				cumulative[i] += backwardSpeedWeight[j] * e_get_prox(j);				
+				cumulative[i] += forwardSpeedWeight[NUMSENSORS/2 - j - 1] * e_get_prox(NUMSENSORS/2 + j);
+			}*/
+		
+        
+        }
 
 		
 		// wheel speed proportional to cumulative sum of sensor reading + some min speed. Sign is adjusted.
@@ -124,7 +134,7 @@ void run_avoid_obs(void)
 //	e_init_sound();
 	e_calibrate_ir();
 
-	e_activate_agenda(avoid_obst, 2000); //500
+	e_activate_agenda(avoid_obst, 500); //500
 	// call function that use leds to show what the robot is "seeing"
 	e_init_motors();
 	e_start_agendas_processing();
