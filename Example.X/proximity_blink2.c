@@ -7,7 +7,7 @@
 #include <string.h>
 #include <stdio.h>
 
-int proximity_blink2()
+void proximity_blink2()
 {
     // Main Loop.
  
@@ -29,6 +29,4 @@ int proximity_blink2()
 			 e_get_prox(5), e_get_prox(6), e_get_prox(7));
 		 e_send_uart1_char(buffer, strlen(buffer));
 		 while (e_uart1_sending());
-
-    return 0;
 }

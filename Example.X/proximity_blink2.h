@@ -1,8 +1,8 @@
 
 
-#ifndef _proximity_blink2
-#define _proximity_blink2
+#ifndef PROXIMITY_BLINK2
+#define PROXIMITY_BLINK2
 
-int proximity_blink2();
+void proximity_blink2();
 
 #endif
