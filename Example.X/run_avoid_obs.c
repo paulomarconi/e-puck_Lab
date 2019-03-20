@@ -35,7 +35,7 @@ int wheelSpeed[2];
 int targetVelocity = 0.9;
 
 // calibrate these values!! 
-int baseVelocity = 3; // was 2
+int baseVelocity = 2; // was 2
 int multiplier = 2;
 
 //int forwardSpeedWeight[4] = {baseVelocity*multiplier*2,baseVelocity*multiplier,baseVelocity,0};
