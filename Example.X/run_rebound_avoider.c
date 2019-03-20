@@ -7,7 +7,17 @@
 
 
 //#include <stdio.h>
+#include "run_rebound_avoider.h"
+#include <p30F6014A.h>
+#include "motor_led/e_init_port.h" // motor init
+#include "a_d/advance_ad_scan/e_prox.h" // proximity sensors init
+#include "uart/e_uart_char.h" // bluetooth comm.
+#include <motor_led/e_epuck_ports.h> // motor ports init
+#include "a_d/advance_ad_scan/e_ad_conv.h" // analog digital conv
 
+//#include <codec/e_sound.h>
+#include <stdio.h> // standard io
+#include <math.h>
 
 
 
@@ -17,7 +27,7 @@
 unsigned int behaviour=0; // 0=avoider, 1=follower
 
 // global constants
-#define T   200000  //200000us=200ms, sample period [us]
+#define T   500000  //200000us=200ms, sample period [us]
 #define pi  3.1415926536    	
 
 // Bubble Rebound algorithm 
@@ -48,16 +58,18 @@ int velLeft=0;
 int velRight=0;
 
 // sensor values
-int proxSensDist[8]={0,0,0,0,0,0,0,0};
-int threshold=0; //
+//int proxSensDist[8]={0,0,0,0,0,0,0,0};
+int proxSensDist[8]={220,220,0,0,0,0,0,0};
+
+int threshold=200; //
 
 
 void run_rebound_avoider(){
     // read sensor values
     unsigned int i;
-    for (i=0; i < 8; i++){
-        proxSensDist[i]=e_get_prox(i);
-    }
+    //for (i=0; i < 8; i++){
+    //    proxSensDist[i]=e_get_prox(i);
+    //}
     
     // Rebound algorithm
     sum_alphaD=0;
@@ -97,6 +109,7 @@ void run_rebound_avoider(){
     // omega = robot angular velocity [rad/s] (pi[rad]=180[deg]), 
     // max_omega=pi[rad/s], T[ms]/1000[ms] = t[s], 
     omega=alphaR/(T/1000000); // instantaneous angular velocity
+    //omega=alphaR;
             
 
     // Angular velocities of the wheels using the Unicycle model

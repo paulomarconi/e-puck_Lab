@@ -34,10 +34,12 @@ void yu_Task2()
     prx5 = e_get_prox(5);
     prx6 = e_get_prox(6);
     prx7 = e_get_prox(7);   
-    do {e_set_speed_left(-600);e_set_speed_right(600);}
-    while(prx0<200&&prx7<200);
-    e_set_speed_left(0);
-    e_set_speed_right(0);
+    //do {e_set_speed_left(-600);e_set_speed_right(600);}
+    e_set_speed_left(-600);e_set_speed_right(600);
+    while(prx0>500&&prx7>500){
+        e_set_speed_left(0);
+        e_set_speed_right(0);
+    }
 
     int prx_temp=e_get_prox(0);
     if(prx_temp > prx0)

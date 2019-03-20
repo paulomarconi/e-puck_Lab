@@ -32,20 +32,20 @@ void rares_task1()
      int N=6;
      int sensor_readings[N];
      int i;
-     double a[4] = { 0, 1, 6, 7};
+     double a[4] = { 0, 1, 2, 5, 6, 7};
      //while(1)
      //{
         e_set_speed_left(750); 
         e_set_speed_right(800);
-        for (i = 0; i<4; i++)
+        for (i = 0; i<6; i++)
         {
-            if ( (e_get_prox(a[i])>200 ) && ((i == 0 ) || (i == 1)) ) 
+            if ( (e_get_prox(a[i])>200 ) && ((i == 0 ) || (i == 1) || (i == 2) ) ) 
                 while(e_get_prox(a[i]) > 200)
                 {
                    e_set_speed_left(-500); 
                    e_set_speed_right(500);
                 }
-            if ( (e_get_prox(a[i])>200 ) && ((i == 6 ) || (i == 7)) ) 
+            if ( (e_get_prox(a[i])>200 ) && ((i == 6 ) || (i == 7) || (i == 2) ) ) 
                 while(e_get_prox(a[i]) > 200)
                 {
                     e_set_speed_left(500);
