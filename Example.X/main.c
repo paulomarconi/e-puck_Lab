@@ -14,7 +14,7 @@
 #include "run_rebound_avoider.h"
 //include "run_rebound_follower.h"
 #include "yu_Task2.h"
-
+#include "follow_wall.h"
 #include "proximity_blink2.h"
 
 
@@ -63,6 +63,8 @@ int main()
             yu_Task2(); 
         else if (selector == 5)
             run_rebound_avoider(); 
+        else if (selector == 6)
+            run_wallfollow();
         //else if (selector == 6)
         //    run_rebound_follower(); 
         
