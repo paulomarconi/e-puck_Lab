@@ -12,8 +12,10 @@
 #include "rares_task1.h";
 #include "rares_task2.h";
 #include "run_rebound_avoider.h"
-#//include "run_rebound_follower.h"
+//include "run_rebound_follower.h"
 #include "yu_Task2.h"
+
+#include "proximity_blink2.h"
 
 
 // functions
@@ -37,8 +39,12 @@ int main()
     e_init_motors(); // Init the motors. Uncomment when you use the motors.
     e_start_agendas_processing(); // Allows the robot to execute multiple tasks.
     
+								
+	e_led_clear();
+	e_set_body_led(0);
+	e_set_front_led(0);
 
-    
+	e_activate_agenda(proximity_blink2, 500);
     // Main Loop.
     while(1)
     {         

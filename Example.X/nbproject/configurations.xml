@@ -38,6 +38,7 @@
       <itemPath>../epucklibs/uart/e_uart2_tx_char.s</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>run_avoid_obs.c</itemPath>
+      <itemPath>proximity_blink.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

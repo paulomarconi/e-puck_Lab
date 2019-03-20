@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../epucklibs/motor_led/advance_one_timer/e_agenda.c ../epucklibs/motor_led/advance_one_timer/e_led.c ../epucklibs/motor_led/advance_one_timer/e_motors.c ../epucklibs/motor_led/advance_one_timer/e_remote_control.c ../epucklibs/a_d/advance_ad_scan/e_prox.c ../epucklibs/motor_led/e_init_port.c ../epucklibs/a_d/advance_ad_scan/e_ad_conv.c ../epucklibs/uart/e_init_uart1.s ../epucklibs/uart/e_init_uart2.s ../epucklibs/uart/e_uart1_rx_char.s ../epucklibs/uart/e_uart1_tx_char.s ../epucklibs/uart/e_uart2_rx_char.s ../epucklibs/uart/e_uart2_tx_char.s main.c run_avoid_obs.c
+SOURCEFILES_QUOTED_IF_SPACED=../epucklibs/motor_led/advance_one_timer/e_agenda.c ../epucklibs/motor_led/advance_one_timer/e_led.c ../epucklibs/motor_led/advance_one_timer/e_motors.c ../epucklibs/motor_led/advance_one_timer/e_remote_control.c ../epucklibs/a_d/advance_ad_scan/e_prox.c ../epucklibs/motor_led/e_init_port.c ../epucklibs/a_d/advance_ad_scan/e_ad_conv.c ../epucklibs/uart/e_init_uart1.s ../epucklibs/uart/e_init_uart2.s ../epucklibs/uart/e_uart1_rx_char.s ../epucklibs/uart/e_uart1_tx_char.s ../epucklibs/uart/e_uart2_rx_char.s ../epucklibs/uart/e_uart2_tx_char.s main.c run_avoid_obs.c proximity_blink.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/105629/e_agenda.o ${OBJECTDIR}/_ext/105629/e_led.o ${OBJECTDIR}/_ext/105629/e_motors.o ${OBJECTDIR}/_ext/105629/e_remote_control.o ${OBJECTDIR}/_ext/1074974123/e_prox.o ${OBJECTDIR}/_ext/1971588547/e_init_port.o ${OBJECTDIR}/_ext/1074974123/e_ad_conv.o ${OBJECTDIR}/_ext/1586682380/e_init_uart1.o ${OBJECTDIR}/_ext/1586682380/e_init_uart2.o ${OBJECTDIR}/_ext/1586682380/e_uart1_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart1_tx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_tx_char.o ${OBJECTDIR}/main.o ${OBJECTDIR}/run_avoid_obs.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/105629/e_agenda.o.d ${OBJECTDIR}/_ext/105629/e_led.o.d ${OBJECTDIR}/_ext/105629/e_motors.o.d ${OBJECTDIR}/_ext/105629/e_remote_control.o.d ${OBJECTDIR}/_ext/1074974123/e_prox.o.d ${OBJECTDIR}/_ext/1971588547/e_init_port.o.d ${OBJECTDIR}/_ext/1074974123/e_ad_conv.o.d ${OBJECTDIR}/_ext/1586682380/e_init_uart1.o.d ${OBJECTDIR}/_ext/1586682380/e_init_uart2.o.d ${OBJECTDIR}/_ext/1586682380/e_uart1_rx_char.o.d ${OBJECTDIR}/_ext/1586682380/e_uart1_tx_char.o.d ${OBJECTDIR}/_ext/1586682380/e_uart2_rx_char.o.d ${OBJECTDIR}/_ext/1586682380/e_uart2_tx_char.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/run_avoid_obs.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/105629/e_agenda.o ${OBJECTDIR}/_ext/105629/e_led.o ${OBJECTDIR}/_ext/105629/e_motors.o ${OBJECTDIR}/_ext/105629/e_remote_control.o ${OBJECTDIR}/_ext/1074974123/e_prox.o ${OBJECTDIR}/_ext/1971588547/e_init_port.o ${OBJECTDIR}/_ext/1074974123/e_ad_conv.o ${OBJECTDIR}/_ext/1586682380/e_init_uart1.o ${OBJECTDIR}/_ext/1586682380/e_init_uart2.o ${OBJECTDIR}/_ext/1586682380/e_uart1_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart1_tx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_tx_char.o ${OBJECTDIR}/main.o ${OBJECTDIR}/run_avoid_obs.o ${OBJECTDIR}/proximity_blink.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/105629/e_agenda.o.d ${OBJECTDIR}/_ext/105629/e_led.o.d ${OBJECTDIR}/_ext/105629/e_motors.o.d ${OBJECTDIR}/_ext/105629/e_remote_control.o.d ${OBJECTDIR}/_ext/1074974123/e_prox.o.d ${OBJECTDIR}/_ext/1971588547/e_init_port.o.d ${OBJECTDIR}/_ext/1074974123/e_ad_conv.o.d ${OBJECTDIR}/_ext/1586682380/e_init_uart1.o.d ${OBJECTDIR}/_ext/1586682380/e_init_uart2.o.d ${OBJECTDIR}/_ext/1586682380/e_uart1_rx_char.o.d ${OBJECTDIR}/_ext/1586682380/e_uart1_tx_char.o.d ${OBJECTDIR}/_ext/1586682380/e_uart2_rx_char.o.d ${OBJECTDIR}/_ext/1586682380/e_uart2_tx_char.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/run_avoid_obs.o.d ${OBJECTDIR}/proximity_blink.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/105629/e_agenda.o ${OBJECTDIR}/_ext/105629/e_led.o ${OBJECTDIR}/_ext/105629/e_motors.o ${OBJECTDIR}/_ext/105629/e_remote_control.o ${OBJECTDIR}/_ext/1074974123/e_prox.o ${OBJECTDIR}/_ext/1971588547/e_init_port.o ${OBJECTDIR}/_ext/1074974123/e_ad_conv.o ${OBJECTDIR}/_ext/1586682380/e_init_uart1.o ${OBJECTDIR}/_ext/1586682380/e_init_uart2.o ${OBJECTDIR}/_ext/1586682380/e_uart1_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart1_tx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_tx_char.o ${OBJECTDIR}/main.o ${OBJECTDIR}/run_avoid_obs.o
+OBJECTFILES=${OBJECTDIR}/_ext/105629/e_agenda.o ${OBJECTDIR}/_ext/105629/e_led.o ${OBJECTDIR}/_ext/105629/e_motors.o ${OBJECTDIR}/_ext/105629/e_remote_control.o ${OBJECTDIR}/_ext/1074974123/e_prox.o ${OBJECTDIR}/_ext/1971588547/e_init_port.o ${OBJECTDIR}/_ext/1074974123/e_ad_conv.o ${OBJECTDIR}/_ext/1586682380/e_init_uart1.o ${OBJECTDIR}/_ext/1586682380/e_init_uart2.o ${OBJECTDIR}/_ext/1586682380/e_uart1_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart1_tx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_rx_char.o ${OBJECTDIR}/_ext/1586682380/e_uart2_tx_char.o ${OBJECTDIR}/main.o ${OBJECTDIR}/run_avoid_obs.o ${OBJECTDIR}/proximity_blink.o
 
 # Source Files
-SOURCEFILES=../epucklibs/motor_led/advance_one_timer/e_agenda.c ../epucklibs/motor_led/advance_one_timer/e_led.c ../epucklibs/motor_led/advance_one_timer/e_motors.c ../epucklibs/motor_led/advance_one_timer/e_remote_control.c ../epucklibs/a_d/advance_ad_scan/e_prox.c ../epucklibs/motor_led/e_init_port.c ../epucklibs/a_d/advance_ad_scan/e_ad_conv.c ../epucklibs/uart/e_init_uart1.s ../epucklibs/uart/e_init_uart2.s ../epucklibs/uart/e_uart1_rx_char.s ../epucklibs/uart/e_uart1_tx_char.s ../epucklibs/uart/e_uart2_rx_char.s ../epucklibs/uart/e_uart2_tx_char.s main.c run_avoid_obs.c
+SOURCEFILES=../epucklibs/motor_led/advance_one_timer/e_agenda.c ../epucklibs/motor_led/advance_one_timer/e_led.c ../epucklibs/motor_led/advance_one_timer/e_motors.c ../epucklibs/motor_led/advance_one_timer/e_remote_control.c ../epucklibs/a_d/advance_ad_scan/e_prox.c ../epucklibs/motor_led/e_init_port.c ../epucklibs/a_d/advance_ad_scan/e_ad_conv.c ../epucklibs/uart/e_init_uart1.s ../epucklibs/uart/e_init_uart2.s ../epucklibs/uart/e_uart1_rx_char.s ../epucklibs/uart/e_uart1_tx_char.s ../epucklibs/uart/e_uart2_rx_char.s ../epucklibs/uart/e_uart2_tx_char.s main.c run_avoid_obs.c proximity_blink.c
 
 
 CFLAGS=
@@ -157,6 +157,13 @@ ${OBJECTDIR}/run_avoid_obs.o: run_avoid_obs.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  run_avoid_obs.c  -o ${OBJECTDIR}/run_avoid_obs.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/run_avoid_obs.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../epucklibs" -I"../epucklibs/btcom" -I"../epucklibs/ircom" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/run_avoid_obs.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/proximity_blink.o: proximity_blink.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/proximity_blink.o.d 
+	@${RM} ${OBJECTDIR}/proximity_blink.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  proximity_blink.c  -o ${OBJECTDIR}/proximity_blink.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/proximity_blink.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../epucklibs" -I"../epucklibs/btcom" -I"../epucklibs/ircom" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/proximity_blink.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/_ext/105629/e_agenda.o: ../epucklibs/motor_led/advance_one_timer/e_agenda.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/105629" 
@@ -220,6 +227,13 @@ ${OBJECTDIR}/run_avoid_obs.o: run_avoid_obs.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/run_avoid_obs.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  run_avoid_obs.c  -o ${OBJECTDIR}/run_avoid_obs.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/run_avoid_obs.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../epucklibs" -I"../epucklibs/btcom" -I"../epucklibs/ircom" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/run_avoid_obs.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/proximity_blink.o: proximity_blink.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/proximity_blink.o.d 
+	@${RM} ${OBJECTDIR}/proximity_blink.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  proximity_blink.c  -o ${OBJECTDIR}/proximity_blink.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/proximity_blink.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I"../epucklibs" -I"../epucklibs/btcom" -I"../epucklibs/ircom" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/proximity_blink.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
