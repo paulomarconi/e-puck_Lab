@@ -1,3 +1,31 @@
+/*
+ * University of Sheffield 
+ * ACS6121 - ACS6121 Robotics and Autonomous Systems
+ * E-puck lab assessment 
+ * 20/03/2019
+ * Group 3.4
+ *  - Rosca Rares
+ *  - Loma Marconi Paulo Roberto
+ *  - Garcia Serrano Guillermo
+ *  - Yu Jiapeng
+ * 
+ * Task 1() - Graded:
+ *  - Explore the environment;
+ *  - Avoid any collision with the environment
+ * 
+ * Task 2() - Graded:
+ *  - Chase an object in an environment free of obstacles
+ *  - Avoid any collision with the object.
+ * 
+ * Proximity_blink2() - Graded:
+ *  - Send the proximity sensors values through Bluetooth
+ *  - Turn on the corresponding Led of the proximity sensors when they detect
+ *    obstacle less than 200
+ * 
+ * Rebound_avoider() - Not Graded;
+ *  - Alternative implementation of Avoider/Follower Rebound Algorithm
+ *  - Ref. 10.1109/ICCA.2010.5524302
+ */
 #include <p30F6014A.h>
 #include <motor_led/e_epuck_ports.h> // motor ports
 #include <motor_led/e_init_port.h> // motor init

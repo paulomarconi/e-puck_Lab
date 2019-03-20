@@ -1,5 +1,3 @@
-
-
 #ifndef PROXIMITY_BLINK2
 #define PROXIMITY_BLINK2
 

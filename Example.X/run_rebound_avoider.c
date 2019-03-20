@@ -59,8 +59,6 @@ int velRight=0;
 
 // sensor values
 int proxSensDist[8]={0,0,0,0,0,0,0,0};
-//int proxSensDist[8]={220,220,0,0,0,0,0,0};
-
 int threshold=200; //
 
 

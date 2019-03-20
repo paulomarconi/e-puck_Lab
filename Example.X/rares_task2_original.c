@@ -26,34 +26,55 @@ int main()
     // Main Loop.
      int right[3] = {1, 2, 3}; // Right-hand side sensors
      int left[3] = {4, 5, 6}; // Left-hand side sensors
-     int min = 200, max = 400; // Minimum and maximum threshold for detection
+     int min = 200, max = 500; // Minimum and maximum threshold for detection
      
      while(1)
      {
-         int i;
-         double sum_big=0, sum_small=0;
-         for (i = 0; i<3; i++)
+         if( (e_get_prox(0) > min-50) && (e_get_prox(7) > min-50) && (e_get_prox(0) < max) && (e_get_prox(7) < max))
          {
-             if(e_get_prox(right[i]) > min ) // If one of the sensors on the right-hand side is activated, spin right until orientation adjusted
-                 while((e_get_prox(0) < min) && (e_get_prox(7) < min))
-                 {
-                     e_set_speed_left(400);
-                     e_set_speed_right(-400);
-                 }
-             if(e_get_prox(left[i]) > min) // If one of the sensors on the left-hand side is activated, spin left until orientation adjusted
-                 while((e_get_prox(0) < min) && (e_get_prox(7) < min))
-                 {
-                     e_set_speed_left(-400);
-                     e_set_speed_right(400);
-                 }
-             if((e_get_prox(7) > min) && (e_get_prox(0) > min)) // If front sensors exceed min threshold move forward until they exceed max threshold
-                 while ((e_get_prox(7) < max) && (e_get_prox(0) < max ) && (e_get_prox(7) > min) && (e_get_prox(0) > min)) 
-                 {
-                     e_set_speed_left(700);
-                     e_set_speed_right(700);
-                 }
-       
-         }   
+             e_set_speed_left(800);
+             e_set_speed_right(800);
+         }
+         else if (e_get_prox(1) > min)
+         {
+             e_set_speed_left(800);
+             e_set_speed_right(-800);
+         }
+         else if (e_get_prox(2) > min)
+         {
+             e_set_speed_left(800);
+             e_set_speed_right(-800);
+         }
+         else if (e_get_prox(3) > min)
+         {
+             e_set_speed_left(800);
+             e_set_speed_right(-800);
+         }
+         else if (e_get_prox(6) > min)
+         {
+             e_set_speed_left(-800);
+             e_set_speed_right(800);
+         }
+         else if (e_get_prox(5) > min)
+         {
+             e_set_speed_left(-800);
+             e_set_speed_right(800);
+         }
+         else if (e_get_prox(4) > min)
+         {
+             e_set_speed_left(-800);
+             e_set_speed_right(800);
+         }
+         else if ((e_get_prox(0) > max+30) && (e_get_prox(7) > max+30))
+         {
+             e_set_speed_left(-800);
+             e_set_speed_right(-800);
+         }
+         else
+         {
+             e_set_speed_left(0);
+             e_set_speed_right(0); 
+         }
          
          
      }
